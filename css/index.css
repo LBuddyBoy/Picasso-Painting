@@ -66,21 +66,40 @@ header h1 {
 
 /* Creates a hill figure using borders */
 
-.ground .hills * {
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 250px solid green;
+.ground .hills .hill1 {
+  z-index: 5;
 }
 
 .ground .hills .hill2 {
   border-bottom: 200px solid green;
+  z-index: 4;
 }
 
-.ground .hills *:first-child {
-  margin-right: 20px;
+.ground .hills .hill3 {
+  z-index: 3;
 }
+
+.ground .hills *:nth-child(1) {
+  margin-right: 475px;
+}
+
+.ground .hills *:nth-child(2) {
+  margin-right: 360px;
+}
+
+.ground .hills *:nth-child(3) {
+  margin-right: 250px;
+}
+
+.ground .hills * {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 250px solid green;
+  }
+  
 
 /* Sky Styling */
 
