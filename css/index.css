@@ -25,7 +25,7 @@ body {
 }
 
 p {
-  font-size: 15px;
+  font-size: 0.85rem;
   color: rgb(230, 174, 111);
 }
 
@@ -100,7 +100,7 @@ header h1 {
   position: absolute;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-bottom: 250px solid green;
+  border-bottom: 250px solid rgb(36, 194, 36);
 }
 
 /* Sky Styling */
@@ -129,8 +129,10 @@ header h1 {
 }
 
 .columns *:nth-child(2) {
-    z-index: 15;
+  z-index: 15;
 }
+
+/* Random Circles */
 
 .sun1 {
   z-index: 5;
@@ -153,8 +155,6 @@ header h1 {
   margin-top: 10.6%;
   border-radius: 50%;
 }
-
-/* Random Circles */
 
 .redcircle1 {
   z-index: 5;
