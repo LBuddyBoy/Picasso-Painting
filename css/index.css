@@ -1,9 +1,21 @@
 /* 
 
-Indexes
-> sky: 100
-> ground: 100
+Z indexes are sorted by priority similar to comparators in Java.
 
+Example:
+> example1 has a z-index of 5
+> example2 has a z-index of 10
+
+example1 will be "behind" example2
+
+Z-Indexes
+> hill1: 5
+> hill2: 4
+> hill3: 3
+> redcircles: 5
+> sun1: 5
+> sun2: 3 (allows it to be behind hill 3, but above column3)
+> column2: 15 (allows it to be above redcircle1)
 
 */
 
@@ -64,42 +76,32 @@ header h1 {
   align-items: flex-end;
 }
 
-/* Creates a hill figure using borders */
-
-.ground .hills .hill1 {
-  z-index: 5;
-}
-
-.ground .hills .hill2 {
-  border-bottom: 200px solid green;
-  z-index: 4;
-}
-
-.ground .hills .hill3 {
-  z-index: 3;
-}
+/* Creates & styles a hill figure using borders */
 
 .ground .hills *:nth-child(1) {
   margin-right: 475px;
+  z-index: 5;
 }
 
 .ground .hills *:nth-child(2) {
   margin-right: 360px;
+  border-bottom: 200px solid green;
+  z-index: 4;
 }
 
 .ground .hills *:nth-child(3) {
   margin-right: 250px;
+  z-index: 3;
 }
 
 .ground .hills * {
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 250px solid green;
-  }
-  
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 250px solid green;
+}
 
 /* Sky Styling */
 
@@ -126,6 +128,10 @@ header h1 {
   justify-content: flex-end;
 }
 
+.columns *:nth-child(2) {
+    z-index: 15;
+}
+
 .sun1 {
   z-index: 5;
   position: absolute;
@@ -134,6 +140,17 @@ header h1 {
   background-color: orange;
   margin-left: 25.4%;
   margin-top: 1.6%;
+  border-radius: 50%;
+}
+
+.sun2 {
+  z-index: 3;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+  margin-left: 78.4%;
+  margin-top: 10.6%;
   border-radius: 50%;
 }
 
