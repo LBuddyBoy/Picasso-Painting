@@ -1,0 +1,211 @@
+/* 
+
+Indexes
+> sky: 100
+> ground: 100
+
+
+*/
+
+body {
+  background-color: rgb(36, 36, 36);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+p {
+  font-size: 15px;
+  color: rgb(230, 174, 111);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header * {
+  /* border: 1px yellow solid; */
+  align-self: center;
+}
+
+header h1 {
+  margin-bottom: 0px;
+  font-size: 50px;
+  color: rgb(255, 136, 0);
+}
+
+* {
+  /* border: 1px yellow solid; */
+}
+
+.picture {
+  margin: 5px;
+}
+
+/* Ground Styling */
+
+.ground {
+  display: flex;
+  width: 100%;
+}
+
+.ground {
+  background-color: rgb(71, 65, 28);
+  height: 210px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ground .hills {
+  height: 210px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+/* Creates a hill figure using borders */
+
+.ground .hills * {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 250px solid green;
+}
+
+.ground .hills .hill2 {
+  border-bottom: 200px solid green;
+}
+
+.ground .hills *:first-child {
+  margin-right: 20px;
+}
+
+/* Sky Styling */
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Select the 2nd child to assign a margin to space it out */
+
+.columns *:nth-child(2) {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.columns * {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: rgb(0, 132, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.sun1 {
+  z-index: 5;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+  margin-left: 25.4%;
+  margin-top: 1.6%;
+  border-radius: 50%;
+}
+
+/* Random Circles */
+
+.redcircle1 {
+  z-index: 5;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(240, 99, 99);
+  margin-left: 30.4%;
+  margin-top: 10.6%;
+  border-radius: 50%;
+}
+
+.redcircle2 {
+  z-index: 5;
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  background-color: rgb(240, 99, 99);
+  margin-left: 10.4%;
+  margin-top: 2.6%;
+  border-radius: 50%;
+}
+
+.redcircle3 {
+  z-index: 5;
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  background-color: rgb(240, 99, 99);
+  margin-left: 36.4%;
+  margin-top: 1.6%;
+  border-radius: 50%;
+}
+
+.redcircle4 {
+  z-index: 5;
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  background-color: rgb(240, 99, 99);
+  margin-left: 15.4%;
+  margin-top: 11.6%;
+  border-radius: 50%;
+}
+
+/* Form Styling */
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form p:first-child {
+  margin: 0px;
+  margin-top: 30px;
+}
+
+.form .data label {
+  text-align: center;
+  color: rgb(255, 136, 0);
+  background-color: rgb(29, 24, 24);
+}
+
+/* Align & Assign 10 px of margin to the form elements */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form .data {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+.form .data input {
+  text-align: center;
+}
+
+.form .data * {
+  margin-top: 10px;
+}
+
+/* Assign 5px of margin only to the first element */
+
+.form .data *:first-child {
+  margin-top: 5px;
+}

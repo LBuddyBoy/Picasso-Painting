@@ -1,0 +1,23 @@
+.submitted {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitted * {
+  /* border: 1px yellow solid; */
+  align-self: center;
+}
+
+.submitted h1 {
+  margin-top: 15%;
+  margin-bottom: 0px;
+  font-size: 100px;
+  color: rgb(255, 136, 0);
+}
+
+.submitted a {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-size: 50px;
+  color: rgb(230, 174, 111);
+}
